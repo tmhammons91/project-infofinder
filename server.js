@@ -44,10 +44,10 @@ app.get("/api/sources", function(req, res) {
       console.log(err);  
     } else {
       console.log(res); 
-      res.send(doc); 
+     res.send(doc); 
     }
   });
-}); 
+});  
 
 app.get("*", function(req, res) {
   res.sendFile(__dirname + "/public/index.html");  

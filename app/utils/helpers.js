@@ -5,10 +5,10 @@ var helpers = {
 getSources: function() {
  return axios.get("/api/sources")
  .then(function(results) {
-     console.log("axios results" + results); 
+     console.log("axios results" + Object.keys(results)); 
      return results;
  }); 
-}
+}, 
 
 
 }
