@@ -11,10 +11,10 @@ getSources: function() {
 }, 
 
 addSource: function(name, url, description, topic) {
-    var newSource = { name: name, url: url, description: description, topic: topic }; 
+    var newSource = { name: name, url: url, description: description, topic: topic }
     return axios.post("api/sources", newSource) 
     .then(function(response) {
-        return response.data._id; 
+        return response.data._id
     }); 
 }
 
