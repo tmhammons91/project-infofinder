@@ -35,7 +35,7 @@ db.once("open", function() {
 });
 
 
-// Routes
+// Routes======================================================================
 
 app.get("/api/sources", function(req, res) {
   Source.find({})
@@ -48,6 +48,18 @@ app.get("/api/sources", function(req, res) {
     }
   });
 });  
+
+app.post("/api/sources", function (req, res) {
+  var newSource = new Source(req.body); 
+  newSource.save(function(err, doc) {
+    if (err) {
+      console.log(err); 
+    }
+    else {
+      res.send(doc); 
+    }
+  }); 
+}); 
 
 app.get("*", function(req, res) {
   res.sendFile(__dirname + "/public/index.html");  

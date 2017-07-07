@@ -81,7 +81,7 @@ export default class InfoCard extends Component {
       <img src="" alt="" />
     </CardMedia> */}
           <CardTitle  title="Information Sources for: " subtitle={this.props.topicValue} />
-          <div></div>
+         
           <CardText children={this.state.sources} >
           </CardText>
           { /*<CardActions>
