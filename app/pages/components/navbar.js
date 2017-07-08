@@ -16,7 +16,7 @@ const MyNavLinks = () => (
 const Navbar = () => (
 
   <AppBar
-    title="InfoFinder: A Service from Authentical.Info"
+    title="InfoFinder"
    iconElementRight = {<MyNavLinks />}
    showMenuIconButton={false}
   />

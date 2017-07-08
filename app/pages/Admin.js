@@ -9,6 +9,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 import SelectField from "material-ui/SelectField";
 import MenuItem from "material-ui/MenuItem";
 
+import SnackbarExampleSimple from "./components/Snackbar"
+
 const sampleTopics = ["copyright", "reference", "geography"];
 
 const styles = {
@@ -135,6 +137,7 @@ export default class AdminPage extends React.Component {
                 </CardActions>
 
                 </Card>
+
             </Paper >
         );
 

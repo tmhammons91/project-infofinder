@@ -20,9 +20,7 @@ const styles = {
         borderTop: "solid",
         borderBottom: "solid",
         borderWidth: "3px",
-        borderColor: "gray"
-
-
+        borderColor: "gray", 
     },
     cardText: {
         overflow: "hidden",

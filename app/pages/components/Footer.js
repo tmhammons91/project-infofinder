@@ -27,7 +27,7 @@ const Footer = React.createClass({
             <div>
                 <div style={phantom} />
                 <div style={style}>
-                    Website &copy;2017 Terri Hammons    |    Authentical.Info <sup>SM</sup> Terri Hammons
+                    InfoFinder &mdash; A Service from Authentical.Info <sup>SM</sup>   |  Website &copy;2017 Terri Hammons  
                 </div>
             </div>
         );
