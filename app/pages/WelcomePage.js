@@ -17,9 +17,10 @@ const styles = {
         textAlign: "center",
         paddingBottom: "15px",
         fontSize: "40px",
-        borderStyle: "double",
-        borderWidth: "10px",
-        borderColor: "black"
+        borderTop: "solid",
+        borderBottom: "solid",
+        borderWidth: "3px",
+        borderColor: "gray"
 
 
     },
@@ -61,8 +62,7 @@ export default class Welcome extends React.Component {
         const { values } = this.state;
         console.log("the current state is: " + JSON.stringify(this.state.values))
         return (
-            <div>
-
+            <div >
                 <Card style={styles.card}>
                     <CardTitle
                         titleStyle={{
@@ -80,12 +80,11 @@ export default class Welcome extends React.Component {
                     >
                         {this.menuItems(values)}
                     </SelectField>
-                    
+
 
                 </Card>
                 <InfoCard topicValue={this.state.values} />
             </div>
         )
-
     }
 } 

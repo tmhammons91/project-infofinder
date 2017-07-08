@@ -3,14 +3,8 @@ import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'm
 
 import FlatButton from 'material-ui/FlatButton';
 
-//import List from 'material-ui/lib/lists/list';
-//import ListItem from 'material-ui/lib/lists/list-item';
 import { List, ListItem } from 'material-ui/List';
-/*import ActionGrade from 'material-ui/lib/svg-icons/action/grade';
-import ActionInfo from 'material-ui/lib/svg-icons/action/info';
-import ContentInbox from 'material-ui/lib/svg-icons/content/inbox';
-import ContentDrafts from 'material-ui/lib/svg-icons/content/drafts';
-import ContentSend from 'material-ui/lib/svg-icons/content/send'; */
+
 import Divider from 'material-ui/Divider';
 
 import helpers from "../../utils/helpers";
@@ -31,7 +25,7 @@ export default class InfoCard extends Component {
       this.setState({ topicValue: this.props.topicValue })
       this.getSources(this.props.topicValue)
     } else if (this.state.topicValue != this.props.topicValue) {
-      this.setState({ topicValue: this.props.topicValue})
+      this.setState({ topicValue: this.props.topicValue })
       this.getSources(this.props.topicValue)
     }
   }
@@ -44,8 +38,6 @@ export default class InfoCard extends Component {
       var topicSources = resources.filter(function (el) {
         return (el.topic === searchTopic);
       })
-      console.log("these are the sources for the current topic: ")
-      console.log(topicSources)
       const jsxElements = topicSources.map((element, i) => {
         return <div key={`${i}-${Date.now()}`}>
           <List id="sourceList">
@@ -55,6 +47,7 @@ export default class InfoCard extends Component {
           </List>
           <Divider />
         </div>
+
       });
       console.log(<div>{jsxElements}</div>)
       this.setState({ sources: <div>{jsxElements}</div> })
@@ -64,33 +57,13 @@ export default class InfoCard extends Component {
 
   render() {
     console.log("This is in the Infocard. The topicValue is: " + this.props.topicValue);
-    console.log("This is in the Infocard. The current state is: " + JSON.stringify(this.state.topicValue))
     let currentTopic = this.props.topicValue
     return (
-      <div>
-
-        <Card>
-          {/* <CardHeader
-      title="URL Avatar"
-      subtitle="Subtitle"
-      avatar=""
-    />
-    <CardMedia
-      overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-    >
-      <img src="" alt="" />
-    </CardMedia> */}
-          <CardTitle  title="Choose a topic to see information resources: " subtitle={this.props.topicValue} />
-         
-          <CardText children={this.state.sources} >
-          </CardText>
-          { /*<CardActions>
-      <FlatButton label="Action1" />
-    </CardActions>
-    */}
-        </Card>
-
-      </div>
+      <Card>
+       <CardTitle subtitle={this.props.topicValue} />
+        <CardText children={this.state.sources} >
+        </CardText>
+      </Card>
     )
   }
 }
