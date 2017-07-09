@@ -4,6 +4,11 @@ import AppBar from "material-ui/AppBar";
 import FlatButton from 'material-ui/FlatButton';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 
+const style = {
+  appbar: {
+    backgroundColor: "#3c8690"
+  }
+}
 
 const MyNavLinks = () => (
 <ToolbarGroup>
@@ -15,7 +20,7 @@ const MyNavLinks = () => (
   
 const Navbar = () => (
 
-  <AppBar
+  <AppBar style={style.appbar}
     title="InfoFinder"
    iconElementRight = {<MyNavLinks />}
    showMenuIconButton={false}

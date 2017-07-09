@@ -9,7 +9,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import SelectField from "material-ui/SelectField";
 import MenuItem from "material-ui/MenuItem";
 
-import SnackbarExampleSimple from "./components/Snackbar"
 
 const sampleTopics = ["copyright", "reference", "geography"];
 
@@ -17,8 +16,8 @@ const styles = {
     all: {
         marginLeft: 20,
     },
-    button: {
-        background: "gray"
+    raisedButton: {
+        backgroundColor: "3c8690"
     },
     card: {
         borderTop: "solid", 
@@ -132,7 +131,10 @@ export default class AdminPage extends React.Component {
                     {this.menuItems(topic)}
                 </SelectField>
                 <CardActions>
-                    <RaisedButton primary={true} style={styles.button} label="Add Source" onTouchTap = {this.handleSubmit} />
+                    <RaisedButton  primary={true}
+                    buttonStyle = {{
+                        backgroundColor: "35757e", 
+                        disabledBackgroundColor: "true" }} label="Add Source" onTouchTap = {this.handleSubmit} />
 
                 </CardActions>
 
