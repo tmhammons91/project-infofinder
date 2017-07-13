@@ -131,10 +131,10 @@ export default class AdminPage extends React.Component {
                     {this.menuItems(topic)}
                 </SelectField>
                 <CardActions>
-                    <RaisedButton  primary={true}
-                    buttonStyle = {{
-                        backgroundColor: "35757e", 
-                        disabledBackgroundColor: "true" }} label="Add Source" onTouchTap = {this.handleSubmit} />
+                    <RaisedButton  
+                    buttonStyle = {{ 
+                        backgroundColor: "35757e" 
+                        }} label="Add Source" onTouchTap = {this.handleSubmit} />
 
                 </CardActions>
 
